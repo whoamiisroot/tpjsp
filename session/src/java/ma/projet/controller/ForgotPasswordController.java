@@ -57,8 +57,8 @@ response.sendRedirect("verificationSuccess.jsp");
 
     private void sendVerificationCodeByEmail(String email, String verificationCode) {
         // Utilisez JavaMail pour envoyer le code de vérification par e-mail
-        final String username = "erasekhyoussef2023@gmail.com"; // Replace with your email
-        final String password = "ygfg ucat xubp xqah "; // Replace with your email password
+        final String username = ""; // Replace with your email
+        final String password = ""; // Replace with your email password
 
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
