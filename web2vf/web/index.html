@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.0/dist/js/bootstrap.bundle.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Application titre</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers votre fichier CSS externe -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+<style>
+  /* CSS pour agrandir les champs de date */
+  .date-input {
+    width: 250px; /* Ajustez la largeur selon vos préférences */
+    text-align: center; /* Centrer le texte dans les champs */
+  }
+</style>
+
+        <style>
+            
+            body {
+    margin-left: 5%; /* Ajoute une marge de 20 pixels à gauche */
+    margin-right: 5%; /* Ajoute une marge de 20 pixels à droite */
+}
+
+            /* Add some basic CSS styles for the navigation bar */
+            ul.navbar {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                background-color: #333; /* Background color for the navbar */
+                overflow: hidden;
+                text-align: center; /* Center the contents horizontally */
+            }
+
+            li.navitem {
+                display: inline-block; /* Display list items in the same line */
+                margin: 0;
+                padding: 0;
+            }
+
+            li.navitem a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li.navitem a:hover {
+                background-color: #555; /* Background color for the hovered item */
+            }
+        </style>
+        <style>
+
+            form {
+                margin: 20px;
+            }
+
+
+            input[type="text"] {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+            }
+
+
+            input[type="submit"] {
+                background-color: #007bff;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                cursor: pointer;
+            }
+
+
+        /* Style pour les tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Espacement en bas de la table */
+    background-color: #fff; /* Couleur de fond de la table */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+/* Style pour les en-têtes de colonnes (th) */
+th {
+    background-color: #333; /* Couleur de fond de l'en-tête */
+    color: #fff; /* Couleur du texte de l'en-tête */
+    padding: 10px; /* Espacement à l'intérieur de l'en-tête */
+    text-align: left; /* Alignement du texte à gauche */
+    border: 1px solid #ccc; /* Bordure autour de l'en-tête */
+}
+
+/* Style pour les cellules de données (td) */
+td {
+    padding: 10px; /* Espacement à l'intérieur de la cellule */
+    text-align: left; /* Alignement du texte à gauche */
+    border: 1px solid #ccc; /* Bordure autour de la cellule */
+}
+
+/* Style pour les cellules de données alternatives (pour les lignes impaires) */
+tr:nth-child(odd) td {
+    background-color: #f2f2f2; /* Couleur de fond pour les lignes impaires */
+}
+
+
+          
+
+        </style>
+        <style>
+            /* Style pour le dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Style pour le lien principal du dropdown */
+.dropdown .dropdown-toggle {
+  background-color: #f8f9fa;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Style pour la liste déroulante */
+.dropdown .dropdown-menu {
+  position: absolute;
+  background-color: #f8f9fa;
+  min-width: 200px; /* Largeur de la liste déroulante */
+  z-index: 1;
+  display: none;
+}
+
+/* Style pour les éléments de la liste déroulante */
+.dropdown .dropdown-menu a {
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Style pour les éléments de la liste déroulante au survol */
+.dropdown .dropdown-menu a:hover {
+  background-color: #555;
+}
+
+/* Afficher la liste déroulante au survol */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+        </style>
+       
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="">Gestion De Stock</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="CategorieController?op=Vide">Categorie</a>
+        </li>
+        
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page"  href="CommandeController?op=Vide">Commade</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page"   href="LigneCommandeProduitController?op=Vide">CommadeProduit</a>
+        </li>
+       <li class="nav-item">
+          <a class="nav-link active" aria-current="page"  href="ProduitController?op=Vide">Produit</a>
+        </li>
+         
+ <li class="nav-item dropdown">
+     <a style="color: #f27d08" class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Filtrage
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+    <li><a class="dropdown-item" href="FiltrageController?filter=filtrage1">Produit Superieur A 100&dollar;</a></li>
+    <li><a class="dropdown-item" href="FiltrageController?filter=filtrage2">Produits Dans Une Commande</a></li>
+    <li><a class="dropdown-item" href="FiltrageController?filter=filtrage3">Produits Entre 2 Dates</a></li>
+  </ul>
+</li>
+
+
+       
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+  
+        
+   
+        
+        <div>
+
+        </div>
+        
+
+    </body>
+</html>
